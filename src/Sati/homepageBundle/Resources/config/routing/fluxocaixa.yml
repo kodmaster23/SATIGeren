@@ -1,0 +1,30 @@
+fluxocaixa:
+    path:     /
+    defaults: { _controller: "SatihomepageBundle:Fluxocaixa:index" }
+
+fluxocaixa_show:
+    path:     /{id}/show
+    defaults: { _controller: "SatihomepageBundle:Fluxocaixa:show" }
+
+fluxocaixa_new:
+    path:     /new
+    defaults: { _controller: "SatihomepageBundle:Fluxocaixa:new" }
+
+fluxocaixa_create:
+    path:     /create
+    defaults: { _controller: "SatihomepageBundle:Fluxocaixa:create" }
+    methods:  POST
+
+fluxocaixa_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SatihomepageBundle:Fluxocaixa:edit" }
+
+fluxocaixa_update:
+    path:     /{id}/update
+    defaults: { _controller: "SatihomepageBundle:Fluxocaixa:update" }
+    methods:  [POST, PUT]
+
+fluxocaixa_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SatihomepageBundle:Fluxocaixa:delete" }
+    methods:  [POST, DELETE]

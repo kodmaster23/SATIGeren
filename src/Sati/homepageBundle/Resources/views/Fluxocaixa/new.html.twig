@@ -1,0 +1,30 @@
+{% block body -%}
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Nova Entrada</h4>
+    </div>
+    <div class="modal-body">
+
+    {% form_theme form 'bootstrap_3_layout.html.twig' %}
+    {{ form_start(form) }}
+        {{ form_errors(form) }}
+
+        {{ form_row(form.tipo) }}
+        {{ form_row(form.descricao) }}
+        {{ form_row(form.valor) }}
+
+        {{ form_row(form.submit, { 'label': 'Cadastrar', 'attr': {'class': 'btn btn-info btn-sm'}}) }}
+
+    {{ form_end(form) }}
+
+
+    </div>
+      <div class="modal-footer">
+
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

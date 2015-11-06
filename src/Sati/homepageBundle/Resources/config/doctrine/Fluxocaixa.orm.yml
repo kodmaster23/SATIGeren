@@ -1,0 +1,31 @@
+Sati\homepageBundle\Entity\Fluxocaixa:
+    type: entity
+    table: fluxocaixa
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        tipo:
+            type: string
+            nullable: false
+            length: 88
+            options:
+                fixed: false
+        descricao:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        valor:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+    lifecycleCallbacks: {  }

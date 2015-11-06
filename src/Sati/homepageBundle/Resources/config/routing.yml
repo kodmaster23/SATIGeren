@@ -1,0 +1,16 @@
+satihomepage_fluxocaixa:
+    resource: "@SatihomepageBundle/Resources/config/routing/fluxocaixa.yml"
+    prefix:   /fluxocaixa
+
+#satihomepage_homepage:
+#    path:     /
+#    defaults: { _controller: SatihomepageBundle:Default:index }
+#
+#fluxo_overview:
+#  path: /fluxo
+#  defaults: {_controller: SatihomepageBundle:Fluxo:overview}
+#
+#fluxo_add:
+#  path: /fluxo/cadastrar
+#  methods: [POST]
+#  defaults: { _controller: SatihomepageBundle:Fluxo:add }

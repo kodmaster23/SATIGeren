@@ -1,0 +1,4 @@
+services:
+#    satihomepage.example:
+#        class: Sati\homepageBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

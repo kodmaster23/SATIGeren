@@ -1,0 +1,4 @@
+satihomepage:
+    resource: "@SatihomepageBundle/Resources/config/routing.yml"
+
+
