@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b9bd2668-ac4d-42da-a52c-46656680ad45" name="GitHub" url="http://localhost">
+        <fileTransfer mountedRoot="C:\Users\kodxi\Documents\GitHub\SatiGeren" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

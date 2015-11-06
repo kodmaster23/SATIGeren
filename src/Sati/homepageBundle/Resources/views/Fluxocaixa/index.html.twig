@@ -102,10 +102,10 @@
                                         <li>
                                             <a href="{{ path('fluxocaixa_show', { 'id': entity.id }) }}">show</a>
                                         </li>
-                                        <li>
-                                            <a data-toggle="modal" data-target="#editModal" class="btn btn-xs btn-default" href="{{ path('fluxocaixa_edit', { 'id': entity.id }) }}"><i
+                                        <li><a class="myButtons" data-toggle="modal" data-target="#editModal" href="{{ path('fluxocaixa_edit', { 'id': entity.id }) }}">Edit2</a>
+                                            <a data-toggle="modal" data-target="#editModal" data-id="{{ entity.id }}" class="btn btn-xs btn-default" data-load-remote="{{ path('fluxocaixa_edit', { 'id': entity.id }) }}" data-remote-target="#editModal .modal-body>Edit<i
                                                         class="fa fa-edit"></i></a>
-                                </td>
+
                                         </li>
                                     </ul>
                                 </td>
@@ -125,6 +125,13 @@
             $('#tabelateste').DataTable();
         } );
 
+        $("a").click(function(e) {
+            e.preventDefault();
+            $("#editFrame").attr("src", $(this).attr("href"));
+            $("a").removeClass("active");
+            $(this).addClass("active");
+        })
+
     </script>
 
     <div class="fade modal text-center" id="modalNew">
@@ -134,14 +141,14 @@
 
         </div>
     </div>
-
-    <div class="fade modal text-center" id="editModal">
+    <div id="editModal" class="modal fade modal text-center">
         <div class="modal-dialog modal-sm">
-
-            {{ render(controller('SatihomepageBundle:Fluxocaixa:edit')) }}
-
+            <div class="modal-content">
+                <iframe name="editFrame" id="editFrame" width="235" height="315"></iframe>
+            </div>
         </div>
     </div>
+
 
 
     {% endblock %}

@@ -126,23 +126,13 @@ class FluxocaixaController extends Controller
         $editForm = $this->createEditForm($entity);
         $deleteForm = $this->createDeleteForm($id);
 
-        $editForm->handleRequest($this->Fluxocaixa);
-
-        if ($editForm->isSubmitted() && $editForm->isValid()) {
-            /** @var Cashback $cashback */
-            $fluxocaixa = $editForm->getData();
-
-            $em->persist($fluxocaixa);
-            $em->flush();
-        }
-
-
-        return array(
+        return $this->render('SatihomepageBundle:Fluxocaixa:edit.html.twig', array(
             'entity'      => $entity,
             'edit_form'   => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
-        );
+        ));
     }
+
 
     /**
     * Creates a form to edit a Fluxocaixa entity.
@@ -183,7 +173,7 @@ class FluxocaixaController extends Controller
         if ($editForm->isValid()) {
             $em->flush();
 
-            return $this->redirect($this->generateUrl('fluxocaixa_edit', array('id' => $id)));
+            return $this->redirect($this->generateUrl('fluxocaixa'));
         }
 
         return $this->render('SatihomepageBundle:Fluxocaixa:edit.html.twig', array(
